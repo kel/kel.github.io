@@ -1,1 +1,171 @@
-Future home of development projects by @kel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@kel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'gradient': 'gradient 8s ease infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .bg-gradient-animated {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+<body class="bg-gradient-animated text-white min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <header class="mb-12 text-center animate__animated animate__fadeIn">
+            <div class="inline-block p-1 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 mb-4 animate__animated animate__pulse animate__infinite animate__slow">
+                <div class="bg-gray-900 rounded-full p-4">
+                    <i class="fas fa-code text-4xl text-gradient"></i>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-3 text-gradient animate__animated animate__fadeInUp">@kel</h1>
+            <h2 class="text-xl md:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-teal-400 animate__animated animate__fadeInUp animate__delay-1s">full stack development</h2>
+        </header>
+
+        <main>
+            <section class="mb-12 bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-lg rounded-xl p-8 shadow-2xl border border-indigo-500/30 animate__animated animate__fadeIn animate__delay-1s">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span class="px-4 py-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white text-sm font-bold">About me</span>
+                </div>
+                <h2 class="text-3xl font-bold mb-6 text-gradient">Hello, world! <span class="animate__animated animate__bounce animate__infinite animate__slow inline-block">👋</span></h2>
+                <p class="text-gray-100 mb-6 leading-relaxed text-lg">
+                    My consciousness is in the cloud and my corporeal form is billions of nanites working in unison.<br />I <i class="fas fa-heart text-pink-500 animate__animated animate__heartBeat animate__infinite"></i> Code + Design. I also enjoy the taste of orange soda.
+                </p>
+                <div class="flex justify-center mt-8">
+                    <a href="https://www.buymeacoffee.com/kel" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-coffee mr-2 animate__animated animate__headShake animate__infinite animate__slow"></i> Buy Me a Coffee
+                    </a>
+                </div>
+            </section>
+
+            <section class="mb-12 relative animate__animated animate__fadeIn animate__delay-2s">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gradient inline-block relative">
+                        <span class="absolute -left-6 -top-4 text-pink-500 opacity-70"><i class="fas fa-star-of-life animate__animated animate__spin animate__infinite animate__slow"></i></span>
+                        Projects
+                        <span class="absolute -right-6 -top-4 text-indigo-500 opacity-70"><i class="fas fa-star-of-life animate__animated animate__spin animate__infinite animate__slow"></i></span>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card-hover bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl border border-pink-500/30 animate__animated animate__fadeInLeft animate__delay-2s">
+                        <div class="h-3 bg-gradient-to-r from-pink-500 to-purple-600"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="p-2 bg-pink-500 bg-opacity-20 rounded-lg mr-3">
+                                    <i class="fas fa-link text-pink-400"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Pop Mart Pop Now Set Link Generator</h3>
+                            </div>
+                            <p class="text-gray-100 mb-6 leading-relaxed">
+                                A tool for generating links to Pop Mart Pop Now sets. Simplifies the process of sharing and accessing Pop Mart collections.
+                            </p>
+                            <div class="flex justify-end">
+                                <a href="https://pm.kel.dev" target="_blank" rel="noopener noreferrer" 
+                                   class="inline-flex items-center px-5 py-2 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Visit Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-hover bg-gray-800 bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl border border-indigo-500/30 animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="h-3 bg-gradient-to-r from-indigo-500 to-cyan-500"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="p-2 bg-indigo-500 bg-opacity-20 rounded-lg mr-3">
+                                    <i class="fas fa-palette text-indigo-400 animate__animated animate__pulse animate__infinite"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Hotline Theme for VS Code</h3>
+                            </div>
+                            <p class="text-gray-100 mb-6 leading-relaxed">
+                                A vibrant, neon-inspired color theme for Visual Studio Code inspired by the aesthetics of the 80s. Perfect for those late-night coding sessions. <span class="inline-block animate__animated animate__flash animate__infinite animate__slow">💻</span>
+                            </p>
+                            <div class="flex justify-end">
+                                <a href="https://github.com/kel/Hotline-Theme-VSCode" target="_blank" rel="noopener noreferrer" 
+                                   class="inline-flex items-center px-5 py-2 bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-600 hover:to-cyan-700 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Visit Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 pb-8 animate__animated animate__fadeIn animate__delay-3s">
+            <div class="relative py-8">
+                <div class="absolute inset-0 overflow-hidden opacity-20">
+                    <div class="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+                </div>
+
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://github.com/kel" target="_blank" rel="noopener noreferrer" 
+                       class="transform hover:scale-125 transition-all duration-300">
+                        <div class="bg-gray-800 p-3 rounded-full shadow-lg border border-gray-700 hover:border-indigo-500">
+                            <i class="fab fa-github text-xl bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kellykarnetsky" target="_blank" rel="noopener noreferrer"
+                       class="transform hover:scale-125 transition-all duration-300">
+                        <div class="bg-gray-800 p-3 rounded-full shadow-lg border border-gray-700 hover:border-blue-500">
+                            <i class="fab fa-linkedin text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400"></i>
+                        </div>
+                    </a>
+                    <a href="https://x.com/kel" target="_blank" rel="noopener noreferrer"
+                       class="transform hover:scale-125 transition-all duration-300">
+                        <div class="bg-gray-800 p-3 rounded-full shadow-lg border border-gray-700 hover:border-sky-500">
+                            <i class="fab fa-x-twitter text-xl bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-blue-400"></i>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-gray-300">&copy;2025 <span class="text-gradient font-bold">@kel</span>. All rights reserved.</p>
+                    <p class="text-xs text-gray-500 mt-2">Made with <i class="fas fa-heart text-pink-500 animate__animated animate__heartBeat animate__infinite"></i> and code</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
